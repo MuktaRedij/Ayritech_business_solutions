@@ -1,0 +1,133 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #FF6700;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.search-box:focus {
+    outline: none;
+    border-color: #FF6700;
+}
+
+.job-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.job-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.job-card img {
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+}
+
+.job-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.job-company {
+    font-size: 1.2rem;
+    color: #FF8C00;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.job-location {
+    display: block;
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.job-description {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.details-btn, .apply-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.details-btn {
+    background-color: #000000;
+    color: white;
+    margin-right: 10px;
+}
+
+.details-btn:hover {
+    background-color: #CA762B;
+	color: black;
+}
+
+.apply-btn {
+    background-color: #000000;
+    color: white;
+}
+
+.apply-btn:hover {
+    background-color: #C88141;
+}
+
+
+@media (max-width: 768px) {
+    .job-card {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}

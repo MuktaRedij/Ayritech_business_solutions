@@ -1,0 +1,83 @@
+<html>
+
+<link rel="stylesheet" href=".\assets\css\style.css"/>
+
+
+<body>
+
+<div class="container">
+    <h1 class="title">Join Our Team</h1>
+    <input type="text" id="search" placeholder="Search job roles..." class="search-box">
+	
+    <div class="job-list" id="jobList">
+        <div class="job-card">
+		    <img class="se" src=".\assets\images\cp.png" width="50" height="60" />
+            <h2 class="job-title">Computer Programmer</h2>
+            <p class="job-company">Ayritech</p>
+            <span class="job-location">Mumbai,India</span>
+            <p class="job-description">These Programmers write code and test programs.They collaborate with developers and engineers to enhance system efficiency and performance.</p>
+                <button class="details-btn" onclick="window.location.href='detailscp.html'">View Details</button>
+                <button class="apply-btn" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdwkr0nFEb50jaOHBnfyIw6OnamUDCyIGPhMLimyV5hM7L4_g/viewform?usp=header'">Quick Apply</button>
+        </div>
+        <div class="job-card">
+		<img class="se" src=".\assets\images\network.jpg" width="50" height="60" />
+            <h2 class="job-title">Network Administrator</h2>
+            <p class="job-company">Ayritech</p>
+            <span class="job-location">Mumbai,India</span>
+            <p class="job-description">They implement various coding methods to prevent hackers from accessing a particular computer network and also prevent security breaches.</p>
+            <button class="details-btn" onclick="window.location.href='detailsna.html'">View Details</button>
+            <button class="apply-btn" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdwkr0nFEb50jaOHBnfyIw6OnamUDCyIGPhMLimyV5hM7L4_g/viewform?usp=header'">Quick Apply</button>
+        </div>
+        <div class="job-card">
+            <img class="se" src=".\assets\images\se.png" width="50" height="60" />
+			<h2 class="job-title">Software Engineer</h2>
+            <p class="job-company">Ayritech</p>
+			<span class="job-location">Mumbai,India</span>
+            <p class="job-description">Develop and maintain software applications to support.They collaborate with teams to ensure high-performance, scalable, and secure applications.</p>
+            <button class="details-btn" onclick="window.location.href='detailsse.html'">View Details</button>
+            <button class="apply-btn" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdwkr0nFEb50jaOHBnfyIw6OnamUDCyIGPhMLimyV5hM7L4_g/viewform?usp=header'">Quick Apply</button>
+        </div>
+        <div class="job-card">
+		    <img class="se" src=".\assets\images\systems.png" width="50" height="60" />
+            <h2 class="job-title">Systems Analyst</h2>
+            <span class="job-location">Bangalore,India</span>
+			<p class="job-company">Ayritech</p>
+            <p class="job-description">They specialize in anticipating errors and performing updates to maintain their company's competitiveness in the software industry.</p>
+            <button class="details-btn" onclick="window.location.href='detailssa.html'">View Details</button>
+            <button class="apply-btn" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdwkr0nFEb50jaOHBnfyIw6OnamUDCyIGPhMLimyV5hM7L4_g/viewform?usp=header'">Quick Apply</button>
+        </div>
+		<div class="job-card">
+		    <img class="se" src=".\assets\images\da.png" width="50" height="60" />
+            <h2 class="job-title">Database Administrator</h2>
+            <span class="job-location">Mumbai,India</span>
+			<p class="job-company">Ayritech</p>
+            <p class="job-description">These administrators typically specialize in cloud-based technology that allows organizations to access their data from any location.</p>
+            <button class="details-btn" onclick="window.location.href='detailsda.html'">View Details</button>
+            <button class="apply-btn" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdwkr0nFEb50jaOHBnfyIw6OnamUDCyIGPhMLimyV5hM7L4_g/viewform?usp=header'">Quick Apply</button>
+        </div>
+		
+        <div class="job-card">
+            <img class="se" src=".\assets\images\security.jpg" width="50" height="60" />
+			<h2 class="job-title">Security Engineer</h2>
+            <span class="job-location">Mumbai,India</span>
+			<p class="job-company">Ayritech</p>
+            <p class="job-description">They may manage the digital security of one company as an in-house engineer, or they could work for IT companies that outsource their services.</p>
+            <button class="details-btn" onclick="window.location.href='detailssen.html'">View Details</button>
+            <button class="apply-btn" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdwkr0nFEb50jaOHBnfyIw6OnamUDCyIGPhMLimyV5hM7L4_g/viewform?usp=header'">Quick Apply</button>
+
+        </div>
+    </div>
+</div>
+<script>
+
+	document.getElementById('search').addEventListener('input', function () {
+        let filter = this.value.toLowerCase();
+        let jobs = document.querySelectorAll('.job-card');
+        jobs.forEach(job => {
+            let title = job.querySelector('.job-title').textContent.toLowerCase();
+            job.style.display = title.includes(filter) ? '' : 'none';
+        });
+    });
+</script>
+</body>
+</html>
